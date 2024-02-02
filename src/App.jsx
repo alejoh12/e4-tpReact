@@ -8,7 +8,8 @@ function App() {
   return (
     <>
     <Container className="my-4">
-      <h1 className="text-center text-light display-3">Lista de Tareas</h1>
+      <h1 className="text-center text-light display-2">Bienvenido</h1>
+      <h2 className="text-center text-light">Ingresa tus tareas</h2>
       <FormularioTarea></FormularioTarea>
     </Container>
     <Footer></Footer>
