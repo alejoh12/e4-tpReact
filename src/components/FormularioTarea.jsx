@@ -7,7 +7,6 @@ import { useState } from "react";
 const FormularioTarea = () => {
   const [tarea, setTarea] = useState("");
   const [lista, setLista] = useState([]);
-  const [borrar, setBorrar] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +14,11 @@ const FormularioTarea = () => {
     setLista([... lista, tarea]);
     setTarea("");
   };
+
+  const borrarTarea = (nombre) => {
+    const arregloFiltrado = lista.filter((tarea)=> tarea !== nombre);//borra
+    setLista(arregloFiltrado);//actualiza state
+  }
 
   return (
     <section className="my-4">
@@ -31,7 +35,7 @@ const FormularioTarea = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas lista={lista}></ListaTareas>
+      <ListaTareas lista={lista} borrarTarea={borrarTarea}></ListaTareas>
     </section>
   );
 };
