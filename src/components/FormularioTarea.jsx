@@ -6,14 +6,14 @@ import { useState } from "react";
 
 const FormularioTarea = () => {
   const [tarea, setTarea] = useState("");
-  const [lista, setLista] = useState("");
+  const [lista, setLista] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // guardar en la lista - (spread)
-    setLista([...lista, tarea])
+    setLista([... lista, tarea]);
     setTarea("");
-  }
+  };
 
   return (
     <section className="my-4">
@@ -30,7 +30,7 @@ const FormularioTarea = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas></ListaTareas>
+      <ListaTareas lista={lista}></ListaTareas>
     </section>
   );
 };
