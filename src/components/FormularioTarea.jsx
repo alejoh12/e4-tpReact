@@ -7,6 +7,7 @@ import { useState } from "react";
 const FormularioTarea = () => {
   const [tarea, setTarea] = useState("");
   const [lista, setLista] = useState([]);
+  const [borrar, setBorrar] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

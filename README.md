@@ -1,6 +1,6 @@
 # Lista de Tareas 😁
 
-Este proyecto React sirve para ...
+Este proyecto React sirve para agregar tareas y eliminarlas.
 
 ## Librerias
 
